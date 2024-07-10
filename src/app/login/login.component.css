@@ -1,0 +1,21 @@
+.myButton{
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 5px;
+    background-color: rgb(240, 248, 255);
+    cursor: pointer;
+}
+.myInput{
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    background-color: rgb(255, 247, 247);
+}
+.myText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+}

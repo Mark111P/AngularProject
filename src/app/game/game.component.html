@@ -1,0 +1,97 @@
+<div class="part">
+    <div class="myText {{!isLightTheme ? 'darkText' : ''}}">Your best by attempts:</div>
+    <table class="{{!isLightTheme ? 'darkTable' : ''}}">
+        <tr>
+            <th>Login</th>
+            <th>Time</th>
+            <th>Attempts</th>
+            <th>Pair count</th>
+        </tr>
+        <tr *ngFor="let rec of userAttempts">
+            <td>{{rec.login}}</td>
+            <td>{{rec.time}}</td>
+            <td>{{rec.attempts}}</td>
+            <td>{{rec.pairCount}}</td>
+        </tr>
+    </table>
+    <div class="myText {{!isLightTheme ? 'darkText' : ''}}">Your best by time:</div>
+    <table class="{{!isLightTheme ? 'darkTable' : ''}}">
+        <tr>
+            <th>Login</th>
+            <th>Time</th>
+            <th>Attempts</th>
+            <th>Pair count</th>
+        </tr>
+        <tr *ngFor="let rec of userTimes">
+            <td>{{rec.login}}</td>
+            <td>{{rec.time}}</td>
+            <td>{{rec.attempts}}</td>
+            <td>{{rec.pairCount}}</td>
+        </tr>
+    </table>
+    
+    <div class="myText {{!isLightTheme ? 'darkText' : ''}}">Best by attempts:</div>
+    <table class="{{!isLightTheme ? 'darkTable' : ''}}">
+        <tr>
+            <th>Login</th>
+            <th>Time</th>
+            <th>Attempts</th>
+            <th>Pair count</th>
+        </tr>
+        <tr *ngFor="let rec of allAttempts">
+            <td>{{rec.login}}</td>
+            <td>{{rec.time}}</td>
+            <td>{{rec.attempts}}</td>
+            <td>{{rec.pairCount}}</td>
+        </tr>
+    </table>
+    <div class="myText {{!isLightTheme ? 'darkText' : ''}}">Best by time:</div>
+    <table class="{{!isLightTheme ? 'darkTable' : ''}}">
+        <tr>
+            <th>Login</th>
+            <th>Time</th>
+            <th>Attempts</th>
+            <th>Pair count</th>
+        </tr>
+        <tr *ngFor="let rec of allTimes">
+            <td>{{rec.login}}</td>
+            <td>{{rec.time}}</td>
+            <td>{{rec.attempts}}</td>
+            <td>{{rec.pairCount}}</td>
+        </tr>
+    </table>
+</div>
+<div class="part">
+    <div class="myText {{!isLightTheme ? 'darkText' : ''}}">Your last 10 games:</div>
+    <table class="{{!isLightTheme ? 'darkTable' : ''}}">
+        <tr>
+            <th>Login</th>
+            <th>Time</th>
+            <th>Attempts</th>
+            <th>Pair count</th>
+        </tr>
+        <tr *ngFor="let rec of last">
+            <td>{{rec.login}}</td>
+            <td>{{rec.time}}</td>
+            <td>{{rec.attempts}}</td>
+            <td>{{rec.pairCount}}</td>
+        </tr>
+    </table>
+</div>
+<div class="part">
+    <div class="imgGrid">
+        <div *ngFor="let imgName of arr; let i = index" class="gameImg" (click)="clickImg(i)">
+            <img src="imgs/back.png" class="myImg backImg">
+            <img src="imgs/{{imgName}}.png" class="myImg frontImg">
+        </div>
+    </div>
+    
+    
+    <div class="myText {{!isLightTheme ? 'darkText' : ''}}">{{text}}</div>
+    <div class="myText {{!isLightTheme ? 'darkText' : ''}}">Attempts: {{attempts}}</div>
+    <button class="myButton {{!isLightTheme ? 'darkButton' : ''}}" (click)="startGame(5)">5 pairs</button>
+    <button class="myButton {{!isLightTheme ? 'darkButton' : ''}}" (click)="startGame(10)">10 pairs</button>
+    <button class="myButton {{!isLightTheme ? 'darkButton' : ''}}" (click)="startGame(15)">15 pairs</button><br><br>
+    <button class="myButton {{!isLightTheme ? 'darkButton' : ''}}" (click)="sound()">{{isSound ? 'Off sounds' : 'On sounds'}}</button>
+    <button class="myButton {{!isLightTheme ? 'darkButton' : ''}}" (click)="onThemeSwitchChange()">{{!isLightTheme ? 'Light theme' : 'Dark theme'}}</button>
+</div>

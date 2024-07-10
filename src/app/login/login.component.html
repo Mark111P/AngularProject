@@ -1,0 +1,5 @@
+<input class="myInput" placeholder="login" [(ngModel)]="userLogin" (input)="clearText()">
+<input class="myInput" placeholder="password" [(ngModel)]="userPassword" (input)="clearText()">
+<button class="myButton" (click)="login()">Login</button>
+<button class="myButton" (click)="registrate()">Registrate</button>
+<div class="myText">{{text}}</div>

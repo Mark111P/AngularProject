@@ -1,0 +1,67 @@
+.myImg{
+    width: 100px;
+    height: auto;
+    transition-duration: 0.5s;
+    backface-visibility: hidden;
+    position: absolute;
+}
+.frontImg{
+    transform: rotateY(180deg);
+}
+.backImg{
+    cursor: pointer;
+}
+.gameImg{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+.imgGrid{
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+}
+table{
+    transition-duration: 1s;
+    border-collapse: collapse;
+}
+td, th{
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+.part{
+    float: left;
+    margin: 10px;
+}
+.part > div{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.part > table{
+    margin-bottom: 10px;
+}
+.myText{
+    transition-duration: 1s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+}
+.myButton{
+    transition-duration: 1s;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 5px;
+    background-color: rgb(240, 248, 255);
+    cursor: pointer;
+}
+.darkButton{
+    color: white;
+    background-color: black;
+}
+.darkText{
+    color: white;
+}
+.darkTable{
+    color: white;
+}
